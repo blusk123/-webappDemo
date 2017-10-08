@@ -2,6 +2,8 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import ReactSwipe from 'react-swipe'
 
+import { Link } from 'react-router'
+
 import './style.less'
 
 class Category extends React.Component {
@@ -26,44 +28,44 @@ class Category extends React.Component {
         		<ReactSwipe className='carousel' swipeOptions={opt}>
 	            	<div className="carousel-item">
 	            		<ul className="clr">
-	            			<li className="lf jingdian">景点</li>
-	            			<li className="lf ktv">KTV</li>
-	            			<li className="lf gouwu">购物</li>
-	            			<li className="lf shenghuofw">生活服务</li>
-	            			<li className="lf sports">健身运动</li>
-	            			<li className="lf meifa">美发</li>
-	            			<li className="lf qinzi">亲子</li>
-	            			<li className="lf xiaochi">小吃快餐</li>
-	            			<li className="lf zizhu">自助餐</li>
-	            			<li className="lf bar">酒吧</li>
+	            			<Link to='/search/jingdian'><li className="lf jingdian">景点</li></Link>
+	            			<Link to='/search/ktv'><li className="lf ktv">KTV</li></Link>
+	            			<Link to='/search/gouwu'><li className="lf gouwu">购物</li></Link>
+	            			<Link to='/search/shenghuofw'><li className="lf shenghuofw">生活服务</li></Link>
+	            			<Link to='/search/sports'><li className="lf sports">健身运动</li></Link>
+	            			<Link to='/search/meifa'><li className="lf meifa">美发</li></Link>
+	            			<Link to='/search/qinzi'><li className="lf qinzi">亲子</li></Link>
+	            			<Link to='/search/xiaochi'><li className="lf xiaochi">小吃快餐</li></Link>
+	            			<Link to='/search/zizhu'><li className="lf zizhu">自助餐</li></Link>
+	            			<Link to='/search/bar'><li className="lf bar">酒吧</li></Link>
 	            		</ul>
 	            	</div>
 	            	<div className="carousel-item">
 	            		<ul className="clr">
-	            			<li className="lf meishi">美食</li>
-	            			<li className="lf movie">电影</li>
-	            			<li className="lf jiudian">酒店</li>
-	            			<li className="lf xiuxianyule">休闲娱乐</li>
-	            			<li className="lf waimai">外卖</li>
-	            			<li className="lf huoguo">火锅</li>
-	            			<li className="lf liren">丽人</li>
-	            			<li className="lf dujia">度假旅游</li>
-	            			<li className="lf zuliao">足疗</li>
-	            			<li className="lf zhoubianyou">周边游</li>
+	            			<Link to='/search/meishi'><li className="lf meishi">美食</li></Link>
+	            			<Link to='/search/movie'><li className="lf movie">电影</li></Link>
+	            			<Link to='/search/jiudian'><li className="lf jiudian">酒店</li></Link>
+	            			<Link to='/search/xiuxianyule'><li className="lf xiuxianyule">休闲娱乐</li></Link>
+	            			<Link to='/search/waimai'><li className="lf waimai">外卖</li></Link>
+	            			<Link to='/search/huoguo'><li className="lf huoguo">火锅</li></Link>
+	            			<Link to='/search/liren'><li className="lf liren">丽人</li></Link>
+	            			<Link to='/search/dujia'><li className="lf dujia">度假旅游</li></Link>
+	            			<Link to='/search/zuliao'><li className="lf zuliao">足疗</li></Link>
+	            			<Link to='/search/zhoubianyou'><li className="lf zhoubianyou">周边游</li></Link>
 	            		</ul>
 	            	</div>
 	            	<div className="carousel-item">
 	            		<ul className="clr">
-	            			<li className="lf ribencai">日本菜</li>
-	            			<li className="lf SPA">SPA</li>
-	            			<li className="lf jiehun">结婚</li>
-	            			<li className="lf xuexipeixun">学习培训</li>
-	            			<li className="lf xican">西餐</li>
-	            			<li className="lf huochejipiao">火车机票</li>
-	            			<li className="lf shaokao">烧烤</li>
-	            			<li className="lf jiazhuang">家装</li>
-	            			<li className="lf chongwu">宠物</li>
-	            			<li className="lf quanbufenlei">全部分类</li>
+	            			<Link to='/search/ribencai'><li className="lf ribencai">日本菜</li></Link>
+	            			<Link to='/search/SPA'><li className="lf SPA">SPA</li></Link>
+	            			<Link to='/search/jiehun'><li className="lf jiehun">结婚</li></Link>
+	            			<Link to='/search/xuexipeixun'><li className="lf xuexipeixun">学习培训</li></Link>
+	            			<Link to='/search/xican'><li className="lf xican">西餐</li></Link>
+	            			<Link to='/search/huochejipiao'><li className="lf huochejipiao">火车机票</li></Link>
+	            			<Link to='/search/shaokao'><li className="lf shaokao">烧烤</li></Link>
+	            			<Link to='/search/jiazhuang'><li className="lf jiazhuang">家装</li></Link>
+	            			<Link to='/search/chongwu'><li className="lf chongwu">宠物</li></Link>
+	            			<Link to='/search/quanbufenlei'><li className="lf quanbufenlei">全部分类</li></Link>
 	            		</ul>
 	            	</div>
 	            </ReactSwipe>

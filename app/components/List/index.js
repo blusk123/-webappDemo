@@ -2,7 +2,11 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 import './style.less'
-const listImg = require('./img/list.png')
+import { Link } from 'react-router'
+
+const listImg = require('./img/list.png');
+const searchImg = require('./img/search.png')
+
 
 class ListCom extends React.Component {
     constructor(props, context) {
@@ -11,29 +15,33 @@ class ListCom extends React.Component {
     }
     render() {
     	const data = this.props.data;
+    	const search = this.props.search;
         return (
         	<div>
-	        	<h2 className="list-title">猜你喜欢</h2>
+        		{search? '': <h2 className="list-title">猜你喜欢</h2>}
+	        	
 	        	<div className="list-container">
 		            {
 		            	data.map((item, index) => {
 		            		return (
-		            			<div key={index} className="list-item clr">
-		            				<img src={listImg} alt=""/>
-		            				<ul className="rt list-item-right">
-		            					<li className="clr">
-		            						<h2 className="lf">{item.title}</h2>
-		            						<span className="rt" style={{color:'#999'}}>{item.distance}</span>
-		            					</li>
-		            					<li style={{fontSize:'14px',color:'#999'}}>
-		            						{item.subTitle}
-		            					</li>
-		            					<li>
-		            						<div className="lf" style={{color:'#e9203d',fontWeight:'700'}}>&yen;{item.price}</div>
-		            						<div className="rt" style={{color:'#bbb'}}>已售{item.mumber}</div>
-		            					</li>
-		            				</ul>
-		            			</div>
+		            			<Link to={'/detail/'+index} key={index}>
+			            			<div className="list-item clr">
+			            				<img src={search?searchImg:listImg} alt=""/>
+			            				<ul className="rt list-item-right">
+			            					<li className="clr">
+			            						<h2 className="lf" style={{color: '#333'}}>{item.title}</h2>
+			            						<span className="rt" style={{color:'#999'}}>{item.distance}</span>
+			            					</li>
+			            					<li style={{fontSize:'14px',color:'#999'}}>
+			            						{item.subTitle}
+			            					</li>
+			            					<li>
+			            						<div className="lf" style={{color:'#e9203d',fontWeight:'700'}}>&yen;{item.price}</div>
+			            						<div className="rt" style={{color:'#bbb'}}>已售{item.mumber}</div>
+			            					</li>
+			            				</ul>
+			            			</div>
+		            			</Link>
 		            		)
 		            	})
 		            }
